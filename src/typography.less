@@ -1,0 +1,209 @@
+// -- DEFAULTS --
+
+html {
+  font-family: @default-font-family;
+  font-size: 100%;
+  color: @text-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .font-size(24);
+  line-height: 1;
+}
+
+p {
+  .font-size();
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+// External links
+a[href*="//"] {
+    &:after {
+      content: '\f08e';
+      font-family: 'FontAwesome';
+      margin-left: 10px;
+      font-size: 80%;
+      line-height: .8;
+    }
+}
+
+ul {
+  .v-margins();
+}
+
+// -- HEADINGS --
+
+.heading {
+  .font-size(32);
+  font-weight: @bold-weight;
+}
+
+.subheading {
+  .font-size(21);
+  font-weight: 300;
+}
+
+@media @tablet {
+  .heading {
+    .font-size(52);
+  }
+
+  .subheading {
+    .font-size(24);
+  }
+}
+
+.hero {
+  @media @gt-tablet {
+    .heading {
+      .font-size(70);
+    }
+
+    .subheading {
+      .font-size(40);
+    }
+  }
+}
+
+.hgroup .heading { margin-bottom: 0; }
+.hgroup .subheading { margin-top: 0; line-height: 1.5; }
+
+// -------------------------
+
+.detail-section {
+  position: relative;
+  .flexbox();
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: @line-height-rem;
+
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .heading {
+    .font-size(21);
+    font-weight: @bold-weight;
+    margin-top: 2.25rem;
+    margin-bottom: .75rem;
+
+    .icon {
+      margin-right: .5rem;
+      color: @primary;
+    }
+  }
+
+  .copy {
+    .font-size(18);
+    font-weight: @light-weight;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  .action {
+    position: absolute;
+    bottom: 0; left: 0;
+    margin: 1rem 0;
+  }
+}
+
+// --------------------------
+
+.hero-copy {
+  .font-size(20);
+  font-weight: 300;
+}
+
+// -- MODIFIERS --
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+@media @mobile {
+  .text-left-mobile { text-align: left; }
+  .text-center-mobile { text-align: center; }
+  .text-right-mobile { text-align: right; }
+}
+
+.limit-width {
+  max-width: 450px;
+}
+
+.light { font-weight: 300; }
+
+b,
+strong,
+.bold {
+  font-weight: bold;
+}
+
+.italic { font-style: italic; }
+
+.text-primary { color: @primary; }
+.text-highlight { color: @highlight; }
+.text-dark { color: @slate; }
+.text-white { color: white; }
+
+.stress { border-bottom: 1px solid currentcolor; }
+.text-shadow { text-shadow: 2px 2px 1px rgba(0,50,100,.33); }
+
+.icon-heading {
+  position: relative;
+  padding-left: 60px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+  }
+}
+
+// -- UTILITIES --
+
+.v-margins {
+  margin-top:    0rem + @line-height;
+  margin-bottom: 0rem + @line-height;
+}
+
+.v-margins-zero {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.font-size (@size: @base) {
+  font-size: 0px + @size;
+  font-size: 0rem + @size / @base;
+
+  .v-margins();
+}
+
+.line-height (@size: @base) {
+  @lines: ceil((@size / @base) / @line-height);
+  line-height: @lines * @line-height-rem;
+}

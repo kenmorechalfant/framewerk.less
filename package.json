@@ -1,0 +1,16 @@
+{
+  "name": "framewerk",
+  "version": "1.0.0",
+  "description": "css framework",
+  "main": "index.js",
+  "dependencies": {
+    "less": "^2.7.2",
+    "normalize.css": "^6.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kenmorechalfant@gmail.com",
+  "license": "ISC"
+}

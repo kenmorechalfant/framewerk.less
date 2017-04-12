@@ -1,0 +1,221 @@
+// ---------- DEFAULT BUTTONS --------------
+
+button.btn {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 2px;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  font-size: .8rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+
+  .make-btn(#aaa);
+
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.make-btn(
+  @bg,
+  @text: #f5f5f5 ) {
+
+  @bg-dark: multiply(@bg, #f1f6ff);
+  @bg-bright: screen(@bg, #442);
+
+  background-color: @bg;
+  background-image: linear-gradient(@bg-bright, @bg-dark);
+  color: @text;
+  text-shadow: 1px 1px 0 @bg-dark;
+
+  opacity: .93;
+  box-shadow: 0 0 0 0 rgba(0,0,0,.33);
+  transition: box-shadow .05s ease-out, opacity .05s ease-out;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+    box-shadow: 0 6px 6px -2px rgba(0,0,0,.33);
+    text-decoration: none;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0 rgba(0,0,0,.33);
+    background-color: @bg-dark;
+    background-image: linear-gradient(darken(@bg-dark, 5%), @bg);
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+} // END make-btn
+
+.btn-primary {
+  .make-btn(@primary);
+}
+
+.btn-highlight {
+  .make-btn(@highlight);
+}
+
+.btn-light {
+  .make-btn(white, @text-color);
+}
+
+.btn-dark {
+  .make-btn(@text-color, white);
+}
+
+.btn-confirm,
+.btn-submit {
+  .make-btn(@confirm);
+}
+
+.btn-deny,
+.btn-cancel,
+.btn-danger {
+  .make-btn(@cancel);
+}
+
+.btn-warning {
+  .make-btn(@warning);
+}
+
+// --------- END DEFAULT BUTTONS ----------
+
+.btn.btn-outline {
+  opacity: .75;
+
+  color: @text-color;
+  border: 1px solid @text-color;
+
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+
+    border-color: @text-color;
+    outline-color: @text-color;
+    color: @text-color;
+
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: lighten(#9e9e9e, 30%);
+    border-color: lighten(#9e9e9e, 17%);
+    color: lighten(#9e9e9e, 17%);
+
+    &.active,
+    &:hover,
+    &:focus {
+      border-color: @deny;
+      color: @deny;
+    }
+  }
+
+  &:active {
+    background-color: rgba(0,0,0,.05);
+  }
+}
+
+.make-btn-outline(@color, @active-bg: @color, @active-text: white) {
+  border: 1px solid @color;
+  color: @color;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    border-color: @color;
+    outline-color: @color;
+    color: @color;
+  }
+
+  &.active,
+  &.selected {
+    border-color: @active-bg;
+    background-color: @active-bg;
+    color: @active-text;
+  }
+} // END make-btn-flat
+
+.btn-outline.btn-outline-auto {
+  .make-btn-outline(currentColor);
+}
+
+.btn-outline {
+  &.btn-primary {
+    .make-btn-outline(@primary);
+  }
+
+  &.btn-highlight {
+    .make-btn-outline(@highlight);
+  }
+
+  &.btn-light {
+    .make-btn-outline(white, white, @text-color);
+  }
+
+  &.btn-dark {
+    .make-btn-outline(@text-color);
+  }
+
+  &.btn-confirm,
+  &.btn-submit {
+    .make-btn-outline(@confirm);
+  }
+
+  &.btn-deny,
+  &.btn-cancel,
+  &.btn-danger {
+    .make-btn-outline(@cancel);
+  }
+
+  &.btn-warning {
+    .make-btn-outline(@warning);
+  }
+}
+
+.btn-link,
+.btn-clear {
+  border: 2px solid transparent;
+
+  background-color: transparent;
+  background-image: none;
+  color: @link-color;
+  text-shadow: none;
+  box-shadow: none;
+
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    color: @link-color;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+}

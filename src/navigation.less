@@ -1,0 +1,31 @@
+ul.nav {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &:extend(.clearfix all);
+
+  li {
+    display: inline-block;
+    padding: 0.5rem 0;
+
+    a {
+      display: block;
+
+      line-height: 2rem;
+      padding: 0 1rem;
+    }
+  }
+
+  li.right {
+    float: right;
+  }
+
+  &.nav-right {
+    text-align: right;
+  }
+}
+
+// ul.nav { outline: 1px solid blue; }
+// ul.nav li a { outline: 1px solid yellow; background-color: rgba(255,200,200,.5); }

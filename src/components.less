@@ -1,0 +1,89 @@
+hr.separator {
+  width: 80%;
+
+  margin-top: 2 * @line-height-rem;
+  margin-bottom: 2 * @line-height-rem;
+
+  border: none;
+  border-top: 1px solid #bbb;
+
+  &.short { width: 200px; }
+
+  &.primary { border-color: @primary; }
+}
+
+hr.heading-separator {
+  width: 50px;
+  margin-left: 0;
+  margin-top: @line-height-rem;
+  margin-bottom: 2 * @line-height-rem;
+
+  border: none;
+  border-top: 5px solid @primary;
+}
+
+.card {
+  background-color: white;
+  color: @text-color;
+
+  a { color: @link-color; }
+
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),
+              0 0 12px 0 rgba(0,0,0,0.12);
+
+  .card__header {
+    padding: 1rem @line-height-rem;
+    line-height: 2rem;
+    background-color: @primary;
+    color: white;
+  }
+
+  .card__content {
+    padding: @line-height-rem;
+  }
+
+  &:extend(.clearfix all);
+
+  &.primary {
+    background-color: @primary;
+    color: white;
+  }
+}
+
+.section {
+  padding-top: @line-height-rem;
+  padding-bottom:  @line-height-rem;
+}
+
+.section.primary {
+  background-color: @primary;
+  color: white;
+}
+
+.dark-bg { background-color: @text-color; }
+
+.light-text {
+  color: white;
+  color: rgba(255,255,255,.8);
+
+  a {
+    color: white;
+
+    &:hover {
+      // opacity: .75;
+    }
+  }
+}
+
+.definition-list {
+  dt { font-size: .75rem; line-height: 1rem; font-weight: bold; text-transform: uppercase; }
+  dd { font-weight: 300; margin-left: 1rem; margin-bottom: 1rem; }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,.2);
+}

@@ -1,0 +1,30 @@
+@import (less) "node_modules/normalize-css/normalize.css";
+
+@import (less) "variables.less";
+@import (less) "mixins.less";
+@import (less) "scaffolding.less";
+@import (less) "navigation.less";
+@import (less) "typography.less";
+@import (less) "components.less";
+@import (less) "form.less";
+@import (less) "buttons.less";
+@import (less) "dropdown.less"; // TODO: make a framewerk.js file, including the dropdown plugin
+
+html.debug:after {
+  content: 'MOBILE';
+
+  padding: 2px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  opacity: .5;
+
+  position: fixed;
+  bottom: 0; right: 0;
+
+  @media @tablet { content: 'TABLET'; }
+  @media @laptop { content: 'LAPTOP'; }
+  @media @desktop { content: 'DESKTOP'; }
+}
+
+.heading{ color:red;}
