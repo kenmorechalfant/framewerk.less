@@ -12,8 +12,12 @@ body {
   box-sizing: border-box;
 }
 
-// .container is a centered column to contain all site content
-// it is full-width on mobile and a fixed width at various device sizes
+/*
+  .container
+  a centered column to contain all site content
+
+  it is full-width on mobile and a fixed width at various device sizes
+*/
 
 .container {
   margin-left: auto;
@@ -46,8 +50,13 @@ body {
   &:extend(.clearfix all);
 }
 
-// the only purpose of a .row is to contain multiple .col elements
-// it has a clearfix and negative margins to offset the margins on columns
+/*
+  .row
+  the only purpose of a .row is to contain multiple .col elements
+
+  it has a clearfix and negative margins to offset the outer horizontal margins
+  on columns so that they align with the edges of the container
+*/
 
 .row {
   margin-left: -15px;
@@ -57,7 +66,21 @@ body {
   &:extend(.clearfix all);
 }
 
-// COLUMNS //
+/*
+  .col
+  Column
+
+  by default a .col takes up full width
+  you can change the width of the column by pairing it with a class in the form
+  .<media query name>-<span>
+  where the media query name is phone|tablet|laptop|desktop
+  and the span is a value 1-12
+
+  e.g: .tablet-6, .desktop-12
+
+  when the appropriate media query is matched the .col will have a width of
+  <span> divided by 12.
+*/
 
 .make-columns(@prefix) {
   .generate-columns(12);
@@ -96,7 +119,17 @@ body {
   .make-columns(~'desktop');
 }
 
-// GRIDS //
+/*
+  .grid
+  Grid
+
+  a .grid contains .grid-items which will all be the same width
+  you define the number of items per row on the .grid itself
+
+  e.g.:
+  .grid.tablet-3  <-- 3 items per row on tablets
+  .grid.grid-4    <-- 4 items per row at all sizes
+*/
 
 .grid {
   &:extend(.row);
