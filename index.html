@@ -7,71 +7,55 @@
   <link rel="stylesheet/less" type="text/css" href="less/framewerk.less" />
 </head>
 <body>
-  <script src="bower_components/less/dist/less.js"></script>
+  <script src="node_modules/less/dist/less.js"></script>
 
-  <br>
   <div class="container">
     <div class="row">
-      <div class="col laptop-6">
-        <form action="/" class="form card">
-          <div class="form-title">This Is The Form Title</div>
-          <div class="field">
-            <label for="name">Name :</label>
-            <input type="text" id="name" value="William Funkerton">
-          </div>
-          <div class="field">
-            <label for="somefield">Some Long Field :</label>
-            <input type="text" id="somefield" value="Balderdash">
-          </div>
-        </form>
-      </div>
+      <ul class="nav">
+        <li><a href="/scaffolding.html">Scaffolding</a></li>
+        <li><a href="/">About</a></li>
+        <li><a href="/">FAQ</a></li>
+        <li><a href="/">Contact</a></li>
+      </ul>
     </div>
-
-    <table style="margin-top:2rem;margin-bottom:2rem;">
-      <tr>
-        <td>Thingy</td>
-        <td>Longer Thingy</td>
-      </tr>
-      <tr>
-        <td>Super Duper Long Thingy</td>
-        <td>Longer Thingy</td>
-      </tr>
-    </table>
-
-    <h1 class="heading">.heading</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime alias
-      perspiciatis, fugiat obcaecati minus <a href="#">here is a link</a> quaerat numquam aliquam
-      voluptatum impedit quibusdam ratione animi voluptas saepe, cupiditate sit
-      soluta in!</p>
-    <p><a href="#" class="btn">.btn</a> <a href="#" class="btn btn-primary">.btn.btn-primary</a></p>
   </div>
 
   <div class="container">
     <div class="row">
       <div class="col laptop-6">
-        <p>.col.laptop-6</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
-      </div>
+        <h1 class="hero hgroup">
+          <div class="heading">Headings Are Really Important</div>
+          <div class="subheading">Subscribe Now To Learn More</div>
+        </h1>
+        <p class="hero">This is a <strong>hero</strong> paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime alias
+          perspiciatis, fugiat minus <a href="#">here is a link</a>!</p>
 
+        <p><a href="#" class="btn">.btn</a> <a href="#" class="btn btn-primary">.btn.btn-primary</a></p>
+      </div>
       <div class="col laptop-6">
-        <p>.col.laptop-6</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
+        <img src="http://www.placehold.it/300x200" class="img-responsive">
       </div>
     </div>
-
-    <p>.grid.grid-5 > .grid-item > img.img-responsive</p>
-
-    <div class="grid grid-5">
-      <div class="grid-item"><img src="http://www.fillmurray.com/300/200" class="img-responsive"></div>
-      <div class="grid-item"><img src="http://www.fillmurray.com/300/200" class="img-responsive"></div>
-      <div class="grid-item"><img src="http://www.fillmurray.com/300/200" class="img-responsive"></div>
-      <div class="grid-item"><img src="http://www.fillmurray.com/300/200" class="img-responsive"></div>
-      <div class="grid-item"><img src="http://www.fillmurray.com/300/200" class="img-responsive"></div>
-    </div>
-
-    <hr class="separator">
   </div>
 
-  <div style="height:500px;"></div>
+  <section class="section" style="background-color:#eee;">
+    <div class="container">
+      <div class="row">
+        <div class="col laptop-6">
+          <h2 class="heading">Section Two</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reprehenderit
+            assumenda, maxime, explicabo maiores perferendis ab veniam nisi nesciunt soluta,
+            ducimus beatae quod omnis laudantium, ea voluptatem velit eius tempore.</p>
+        </div>
+
+        <div class="col laptop-6">
+          <h2 class="heading">Section Three</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reprehenderit
+            assumenda, maxime, explicabo maiores perferendis ab veniam nisi nesciunt soluta,
+            ducimus beatae quod omnis laudantium, ea voluptatem velit eius tempore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>

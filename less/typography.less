@@ -2,23 +2,63 @@
 
 html {
   font-family: @default-font-family;
-  font-size: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
   color: @text-color;
+
+  @media @tablet {
+    font-size: 18px;
+  }
+
+  @media @desktop {
+    font-size: 20px;
+  }
 }
+
+// -- HEADINGS --
 
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  .font-size(24);
+h6,
+.heading,
+.subheading,
+.hgroup {
+  font-size: 2rem;
   line-height: 1;
+  margin: 1rem 0;
+  font-weight: @light-weight;
 }
 
-p {
-  .font-size();
+.subheading {
+  font-size: 1.5rem;
 }
+
+@media @laptop {
+  .heading {
+    font-size: 2.6rem;
+  }
+
+  .subheading {
+    font-size: 1.8rem;
+  }
+}
+
+// -- PARAGRAPHS --
+
+p {
+  font-size: 1rem;
+}
+
+p.hero
+.hero-copy {
+  font-size: 1.2rem;
+}
+
+// -- LINKS --
 
 a {
   color: @link-color;
@@ -30,8 +70,8 @@ a {
   }
 }
 
-// External links
-a[href*="//"] {
+// add icon to let them know they will leave this site
+a.external {
     &:after {
       content: '\f08e';
       font-family: 'FontAwesome';
@@ -41,46 +81,19 @@ a[href*="//"] {
     }
 }
 
+// -- LISTS --
+
 ul {
   .v-margins();
 }
 
-// -- HEADINGS --
-
-.heading {
-  .font-size(32);
-  font-weight: @bold-weight;
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
 }
 
-.subheading {
-  .font-size(21);
-  font-weight: 300;
-}
 
-@media @tablet {
-  .heading {
-    .font-size(52);
-  }
-
-  .subheading {
-    .font-size(24);
-  }
-}
-
-.hero {
-  @media @gt-tablet {
-    .heading {
-      .font-size(70);
-    }
-
-    .subheading {
-      .font-size(40);
-    }
-  }
-}
-
-.hgroup .heading { margin-bottom: 0; }
-.hgroup .subheading { margin-top: 0; line-height: 1.5; }
 
 // -------------------------
 
@@ -123,20 +136,7 @@ ul {
   }
 }
 
-// --------------------------
-
-.hero-copy {
-  .font-size(20);
-  font-weight: 300;
-}
-
 // -- MODIFIERS --
-
-.list-unstyled {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-}
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }

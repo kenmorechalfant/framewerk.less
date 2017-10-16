@@ -9,31 +9,31 @@
 
 @lt-laptop: ~'(max-width:1023px)';
 
-@base: 16;
-@line-height: 1.5;
-@line-height-rem: @line-height * 1rem;
+// COLORS
+
+@slate: #223d4a;
+@green: #22b573;
+@blue: #579cf3;
+@red: #ff3367;
+@yellow: #f1b107;
+
+@confirm: @green;
+@cancel: @red;
+@deny: @cancel;
+@warning: @yellow;
+
+@primary: @blue;
+@highlight: @yellow;
+
+// TYPOGRAPHY
 
 @default-font-family: ~'"Roboto", Helvetica, Arial, sans-serif';
+@base: 18;
+@line-height: 1.5;
+@line-height-rem: @line-height * 1rem;
 
 @light-weight: 300;
 @bold-weight: 800;
 
-@green: #22b573;
-@blue: #579cf3;
-@dark-green: #35876b;
-@slate: #223d4a;
-@red: #ff3367;
-@yellow: #f1b107;
-
 @text-color: @slate;
-@link-color: @green;
-
-@primary: @green;
-@highlight: @yellow;
-
-@confirm: @green;
-
-@cancel: @red;
-@deny: @cancel;
-
-@warning: @yellow;
+@link-color: @blue;
