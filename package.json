@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "css framework",
   "main": "index.js",
-  "dependencies": {
-    "normalize.css": "^7.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "less": "^3.0.0-alpha.3"
   },
