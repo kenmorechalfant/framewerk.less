@@ -17,9 +17,13 @@
 @red: #ff3367;
 @yellow: #f1b107;
 
+@dark: @slate;
+
+@success: @green;
 @confirm: @green;
-@cancel: @red;
+@error: @red;
 @deny: @cancel;
+@cancel: @red;
 @warning: @yellow;
 
 @primary: @blue;
@@ -28,12 +32,18 @@
 // TYPOGRAPHY
 
 @default-font-family: ~'"Roboto", Helvetica, Arial, sans-serif';
-@base: 18;
+@default-font-size: 16px;
 @line-height: 1.5;
-@line-height-rem: @line-height * 1rem;
+@default-font-weight: 300;
+
+@default-heading-weight: 300;
 
 @light-weight: 300;
 @bold-weight: 800;
 
-@text-color: @slate;
+@text-color: @dark;
 @link-color: @blue;
+
+// SPACING
+
+@vertical-spacing: 2rem;

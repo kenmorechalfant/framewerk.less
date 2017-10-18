@@ -2,9 +2,9 @@
 
 html {
   font-family: @default-font-family;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
+  font-size: @default-font-size;
+  font-weight: @default-font-weight;
+  line-height: @line-height;
   color: @text-color;
 }
 
@@ -22,7 +22,7 @@ h6,
   font-size: 2rem;
   line-height: 1;
   margin: 1rem 0;
-  font-weight: @light-weight;
+  font-weight: @default-heading-weight;
 }
 
 .subheading {
@@ -76,7 +76,8 @@ a.external {
 // -- LISTS --
 
 ul {
-  .v-margins();
+  margin-top: @vertical-spacing;
+  margin-bottom: @vertical-spacing;
 }
 
 .list-unstyled {
@@ -85,48 +86,18 @@ ul {
   margin-top: 0;
 }
 
-// -------------------------
+// -- MODIFIERS --
 
-.detail-section {
-  position: relative;
-  .flexbox();
-  flex-direction: column;
-  height: 100%;
-  padding-bottom: @line-height-rem;
-
-  max-width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-
-  .heading {
-    .font-size(21);
-    font-weight: @bold-weight;
-    margin-top: 2.25rem;
-    margin-bottom: .75rem;
-
-    .icon {
-      margin-right: .5rem;
-      color: @primary;
-    }
-  }
-
-  .copy {
-    .font-size(18);
-    font-weight: @light-weight;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-  }
-
-  .action {
-    position: absolute;
-    bottom: 0; left: 0;
-    margin: 1rem 0;
-  }
+b,
+strong,
+.bold {
+  font-weight: @bold-weight;
 }
 
-// -- MODIFIERS --
+.light { font-weight: @light-weight; }
+
+.italic { font-style: italic; }
+
 
 .text-left { text-align: left; }
 .text-center { text-align: center; }
@@ -138,62 +109,10 @@ ul {
   .text-right-mobile { text-align: right; }
 }
 
-.limit-width {
-  max-width: 450px;
-}
-
-.light { font-weight: 300; }
-
-b,
-strong,
-.bold {
-  font-weight: bold;
-}
-
-.italic { font-style: italic; }
-
 .text-primary { color: @primary; }
 .text-highlight { color: @highlight; }
-.text-dark { color: @slate; }
+.text-dark { color: @dark; }
 .text-white { color: white; }
+.text-light-gray { color: #eee; }
 
-.stress { border-bottom: 1px solid currentcolor; }
 .text-shadow { text-shadow: 2px 2px 1px rgba(0,50,100,.33); }
-
-.icon-heading {
-  position: relative;
-  padding-left: 60px;
-
-  img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-  }
-}
-
-// -- UTILITIES --
-
-.v-margins {
-  margin-top:    0rem + @line-height;
-  margin-bottom: 0rem + @line-height;
-}
-
-.v-margins-zero {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.font-size (@size: @base) {
-  font-size: 0px + @size;
-  font-size: 0rem + @size / @base;
-
-  .v-margins();
-}
-
-.line-height (@size: @base) {
-  @lines: ceil((@size / @base) / @line-height);
-  line-height: @lines * @line-height-rem;
-}

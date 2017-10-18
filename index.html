@@ -8,6 +8,7 @@
 </head>
 <body>
   <script src="node_modules/less/dist/less.js"></script>
+  <script src="node_modules/holderjs/holder.js"></script>
 
   <div class="container">
     <div class="row">
@@ -33,23 +34,23 @@
         <p><a href="#" class="btn">.btn</a> <a href="#" class="btn btn-primary">.btn.btn-primary</a></p>
       </div>
       <div class="col laptop-6">
-        <img src="http://www.placehold.it/300x200" class="img-responsive">
+        <img data-src="holder.js/400x300?auto=yes&text=x" class="img-responsive">
       </div>
     </div>
   </div>
 
-  <section class="section" style="background-color:#eee;">
+  <section class="section bg-primary text-white">
     <div class="container">
       <div class="row">
-        <div class="col laptop-6">
-          <h2 class="heading">Section Two</h2>
+        <div class="col laptop-5">
+          <h2 class="heading">Col Laptop 5</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reprehenderit
             assumenda, maxime, explicabo maiores perferendis ab veniam nisi nesciunt soluta,
             ducimus beatae quod omnis laudantium, ea voluptatem velit eius tempore.</p>
         </div>
 
-        <div class="col laptop-6">
-          <h2 class="heading">Section Three</h2>
+        <div class="col laptop-7">
+          <h2 class="heading">Col Laptop 7</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reprehenderit
             assumenda, maxime, explicabo maiores perferendis ab veniam nisi nesciunt soluta,
             ducimus beatae quod omnis laudantium, ea voluptatem velit eius tempore.</p>
@@ -57,5 +58,18 @@
       </div>
     </div>
   </section>
+
+  <div class="container section">
+    <div class="row">
+      <div class="col laptop-6">
+        <div class="card">
+          <div class="card__header">Card Header</div>
+          <div class="card__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga illum, dolorum cupiditate sint voluptatum, est voluptas accusantium modi! Facere nihil eaque sunt dignissimos, debitis atque ut saepe ratione maxime quod!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
