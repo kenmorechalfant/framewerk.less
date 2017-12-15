@@ -1,252 +1,30 @@
-// material-inputs, to be used with material-inputs.js
 
-.form__input {
-  position: relative;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  &:extend(.clearfix all);
+input:not([type]),
+input[type=text],
+input[type=hidden],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=time],
+input[type=date],
+input[type=datetime-local],
+input[type=tel],
+input[type=number],
+input[type=search],
+textarea {
 
-  input:not([type]),
-  input[type=text],
-  input[type=hidden],
-  input[type=password],
-  input[type=email],
-  input[type=url],
-  input[type=time],
-  input[type=date],
-  input[type=datetime-local],
-  input[type=tel],
-  input[type=number],
-  input[type=search],
-  textarea {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #9e9e9e;
-    border-radius: 0;
-    outline: none;
-    height: 3rem;
+}
+
+.form {
+  .input {
+    display: block;
     width: 100%;
-    font-size: 1rem;
-    margin: 0 0 15px 0;
-    padding: 0;
-    box-shadow: none;
-    box-sizing: content-box;
-
-    &:focus:not([readonly]) {
-      border-bottom: 1px solid @primary;
-      box-shadow: 0 1px 0 0 @primary;
-    }
-
-    &:focus:not([readonly])+label {
-      color: @primary;
-    }
-
-    & + label {
-      width: 100%;
-      padding-right: .5rem;
-      color: #9e9e9e;
-      position: absolute;
-      top: .8rem;
-      left: 0;
-      font-size: 1rem;
-      cursor: text;
-
-      &.fixed,
-      &.active {
-        font-size: .8rem;
-        top: -.5rem;
-      }
-    }
-
-    &.error {
-      border-color: @red;
-      box-shadow: 0 1px 0 0 @red;
-
-      & + label {
-        &:after {
-          position: relative;
-          bottom: -1rem;
-          font-size: .8rem;
-          color: @red;
-          display: block;
-
-          content: attr(data-error);
-        }
-
-        &.error-right:after {
-          font-size: .8rem;
-          bottom: auto;
-          top: -1rem;
-          text-align: right;
-        }
-      }
-
-      & + label.active:after,
-      &:focus + label:after {
-        font-size: .8rem;
-        bottom: -2.55rem;
-      }
-
-      &:focus + label:after {
-        color: @primary;
-      }
-    }
+    margin: 1rem 0;
+    padding: 5px 10px;
   }
 
-  textarea.error {
-    & + label:after {
-      bottom: -4rem;
-    }
-
-    & + label.active:after,
-    &:focus + label:after {
-      bottom: -5.55rem;
-    }
-  }
-
-  p.form-label {
-    color: #9e9e9e;
-    font-size: .8rem;
-    margin-top: 0;
-    margin-bottom: .2rem;
-  }
-
-  textarea {
-    resize: none;
-    margin-top: 1rem;
-    height: 5rem;
-    padding: 0;
-  }
-
-  input[type=checkbox],
-  input[type=radio] {
-    & + label {
-      color: #9e9e9e;
-      padding-left: .5rem;
-      margin-right: 1.5rem;
-    }
-
-    &:checked + label{
-      color: @primary;
-    }
-  }
-
-  .btn-input {
-    position: absolute;
-    right: 0;
-    top: 10px;
-
-    background-color: transparent;
-    background-image: none;
-    border-color: transparent;
-    text-shadow: none;
-    box-shadow: none;
-
-    color: @primary;
-
-    &:focus,
-    &:hover {
-      background-color: transparent;
-      border-color: transparent;
-      background-image: none;
-    }
-  }
-} // .form__input
-
-.form-header {
-  padding: 1.5rem 0 0 1.5rem;
-  font-weight: 300;
-}
-
-.form-footer {
-  &:extend(.clearfix all);
-
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-
-  background-color: #f3f3f3;
-  border-top: 1px solid #ddd;
-  padding: 1rem @line-height-rem;
-
-  .btn-next {
-    float: right;
-  }
-}
-
-.row > .form__input {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-fieldset {
-  border-color: transparent;
-  border-bottom-color: #9e9e9e;
-  padding: 1rem 1rem 1.5rem 1rem;
-}
-
-.form__button-row {
-  position: relative;
-  margin-top: 1rem;
-
-  .btn-submit {
-    float: right;
-  }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.clickable,
-.clickable input {
-  cursor: pointer !important;
-}
-
-.form-notification {
-  display: none;
-  position: absolute;
-  bottom: 80px;
-  left: 20px;
-  right: 20px;
-
-  padding: 1rem;
-
-  background-color: #aaa;
-  color: white;
-  font-weight: 300;
-
-  &.success {
-    background-color: @primary;
-  }
-
-  &.error {
-    background-color: @red;
-  }
-
-  a {
-    color: white;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  .notification-title {
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  .notification-message {
-    font-style: italic;
-  }
-
-  .close-notification {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: .75rem;
-
-    cursor: pointer;
+  input.input {
+    border: 1px solid #ccc;
+    border-radius: 3px;
   }
 }
