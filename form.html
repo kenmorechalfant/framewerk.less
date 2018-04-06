@@ -59,6 +59,23 @@
             <label for="bar">Bar</label>
           </div>
 
+          <div class="field">
+            <label for="description">Description</label>
+            <textarea name="description" id="description"></textarea>
+          </div>
+
+          <div class="field">
+            <label for="referrer">How did you hear about us?</label>
+            <select id="referrer" name="referrer" required>
+              <option value="" disabled selected>Select...</option>
+              <option value="nope">I didn't</option>
+              <option value="member">Another member</option>
+              <option value="ad">An advertisement</option>
+              <option value="social">Social Media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
           <button class="btn">Edit</button>
           <input type="submit" value="Submit" class="btn btn-primary">
         </form>
