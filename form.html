@@ -30,11 +30,35 @@
     <div class="row">
       <div class="col tablet-6">
         <form class="form" action="#">
-          <input type="email" name="email" placeholder="email" class="input">
-          <input type="password" name="password" placeholder="password" class="input">
-          <label for="party" class="input">
-            <input type="checkbox" name="party" id="party"> Do you like to party?
-          </label>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+          </div>
+          <div class="field">
+            <label for="dis1">Disabled Field</label>
+            <input type="dis1" name="dis1" id="dis1" disabled>
+          </div>
+
+          <div class="field checkbox">
+            <input type="checkbox" name="party" id="party">
+            <label for="party">What does it look like when there is a super duper extra long checkbox label? Hmm?</label>
+          </div>
+          <div class="field checkbox">
+            <input type="checkbox" name="dis2" id="dis2" checked disabled>
+            <label for="dis2">Is this disabled?</label>
+          </div>
+
+          <div class="field checkbox">
+            <input type="checkbox" name="foo" id="foo">
+            <label for="foo">Foo</label>
+            <input type="checkbox" name="bar" id="bar">
+            <label for="bar">Bar</label>
+          </div>
+
           <button class="btn">Edit</button>
           <input type="submit" value="Submit" class="btn btn-primary">
         </form>

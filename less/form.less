@@ -16,15 +16,65 @@ textarea {
 }
 
 .form {
-  .input {
-    display: block;
-    width: 100%;
+  .field {
     margin: 1rem 0;
-    padding: 5px 10px;
+
+    // &:extend(.clearfix all);
   }
 
-  input.input {
-    border: 1px solid #ccc;
-    border-radius: 3px;
+  .field > label {
+    display: block;
+    font-size: .8rem;
+
+    text-transform: uppercase;
+    color: #999;
   }
+
+  .field > input {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    &:disabled {
+      background-color: #f3f3f3;
+    }
+  }
+
+  // CHECKBOXES
+
+  .field.checkbox > label,
+  .field.checkbox input {
+    // float: left;
+    display: inline;
+  }
+
+  .field.checkbox > label {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    text-transform: none;
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  .field.checkbox input {
+    display: inline-block;
+    width: auto;
+    transform: translateY(3px);
+    height: 1rem;
+  }
+
+  .field.checkbox input:checked + label {
+    color: inherit;
+  }
+
+  .field.checkbox input:disabled + label {
+    color: #999;
+    opacity: .5;
+  }
+
+  // .field.checkbox > label + input {
+  //   margin-left: .5rem;
+  // }
 }
