@@ -5,12 +5,33 @@
     content: ' ▾';
   }
 
-  @media @mobile {
-    display: block;
+  // TODO: extract to its own modifier class
+  // MERGE ROOT mode
+  // the following commented out styles are to give the root link a background
+  // and merge it with the dropdown when it's open
+
+  // & > a {
+  //   border: 1px solid transparent;
+  // }
+  //
+  // &:focus-within > a,
+  // &:hover > a,
+  // & > a:hover,
+  // & > a:focus {
+  //   position: relative;
+  //   z-index: 2;
+  //   background-color: white;
+  //   border: 1px solid #eee;
+  //   border-bottom-color: white;
+  // }
+
+  &:focus-within {
+    pointer-events: none;
   }
 
   &:focus-within > ul {
     left: 0;
+    pointer-events: auto;
   }
 
   &:hover > ul,
@@ -25,11 +46,14 @@
     position: absolute;
     z-index: 1;
     top: 100%;
+    // top: calc(~"100% - 1px"); // MERGE ROOT mode
     margin: 0;
     padding: 0;
     background-color: white;
     color: @text-color;
-    box-shadow: 0 2px 5px 1px rgba(0,0,0,.1);
+    border: 1px solid #eee;
+    border-radius: 3px;
+    // border-radius: 0 0 3px 3px; // MERGE ROOT mode
 
     li {
       display: list-item;
