@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="debug">
+<html lang="en" class="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,50 +13,173 @@
     <div class="row">
       <ul class="nav">
         <li><a href="/">Home</a></li>
-        <li><a href="/scaffolding.html">Scaffolding</a></li>
-        <li><a href="/form.html">Forms</a></li>
+        <li><a href="/">FAQ</a></li>
         <li><a href="/">About</a></li>
         <li><a href="/">Contact</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)">Dropdown</a>
+          <ul>
+            <li><a href="/">First Link</a></li>
+            <li><a href="/">Second Link</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="col laptop-6">
-        <h1 class="hero hgroup">
-          <div class="heading">Framewerk</div>
-          <div class="subheading">CSS/LESS Framework</div>
-        </h1>
-        <p class="hero">This is a <strong>hero</strong> paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime alias
-          perspiciatis, fugiat minus <a href="#">here is a link</a>!</p>
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col laptop-6">
+          <hgroup>
+            <h1 class="heading">Framewerk</h1>
+            <h2 class="subheading">CSS/LESS Framework</h2>
+          </hgroup>
 
-        <p>
-          <a href="#" class="btn btn-sm">Small</a>
-          <a href="#" class="btn">Regular</a>
-          <a href="#" class="btn btn-lg">Large</a>
-        </p>
-      </div>
-      <div class="col laptop-6">
-        <img src="//www.placehold.it/500x250" class="img-responsive">
+          <p class="hero">This is a <strong>hero</strong> paragraph. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime alias
+            perspiciatis, fugiat minus.</p>
+          <p><a class="btn" href="https://github.com/kenmorechalfant/framewerk">Github</a></p>
+        </div>
+        <div class="col laptop-6">
+          <img src="//www.placehold.it/500x250" class="img-responsive">
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <hgroup>
+        <h1 class="heading">Scaffolding</h1>
+        <h2 class="subheading">Containers, Rows and Columns</h2>
+      </hgroup>
+
+      <p><code>.col.&lt;media-query-name&gt;-&lt;span&gt;</code></p>
+
+      <p>If you are not using any <strong>columns</strong> then <strong>you do not need a row</strong>. Simply put your content directly into a container.</p>
+
+      <div class="row">
+        <div class="col laptop-6">
+          <p>.col.laptop-6</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
+        </div>
+
+        <div class="col laptop-6">
+          <p>.col.laptop-6</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col laptop-4">
+          <p>.col.laptop-4</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
+        </div>
+
+        <div class="col laptop-4">
+          <p>.col.laptop-4</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
+        </div>
+
+        <div class="col laptop-4">
+          <p>.col.laptop-4</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in excepturi, modi reprehenderit quibusdam esse reiciendis labore repudiandae optio, delectus cupiditate ducimus doloribus deleniti beatae similique sunt eum dolore tempora.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="heading">Buttons</h1>
+
+      <a href="#" class="btn">a.btn</a>
+      <a href="#" class="btn btn-primary">a.btn.btn-primary</a>
+
+      <br>
+      <br>
+
+      <a href="#" class="btn btn-sm">a.btn.btn-sm</a>
+      <a href="#" class="btn">a.btn</a>
+      <a href="#" class="btn btn-lg">a.btn.btn-lg</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="heading">Forms</h1>
+
+      <div class="row">
+        <div class="col tablet-6">
+          <form class="form" action="#">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required>
+            </div>
+            <div class="field">
+              <label for="password">Password <span class="note">8-32 chars</span></label>
+              <input type="password" name="password" id="password">
+            </div>
+            <div class="field">
+              <label for="dis1">Disabled Field</label>
+              <input type="dis1" name="dis1" id="dis1" disabled>
+            </div>
+  
+            <div class="field checkbox">
+              <input type="checkbox" name="party" id="party">
+              <label for="party">What does it look like when there is a super duper extra long checkbox label? Hmm?</label>
+            </div>
+            <div class="field checkbox">
+              <input type="checkbox" name="dis2" id="dis2" checked disabled>
+              <label for="dis2">Is this disabled?</label>
+            </div>
+  
+            <div class="field checkbox">
+              <input type="checkbox" name="foo" id="foo">
+              <label for="foo">Foo</label>
+              <input type="checkbox" name="bar" id="bar">
+              <label for="bar">Bar</label>
+            </div>
+  
+            <div class="field">
+              <label for="description">Description</label>
+              <textarea name="description" id="description"></textarea>
+            </div>
+  
+            <div class="field">
+              <label for="referrer">How did you hear about us?</label>
+              <select id="referrer" name="referrer" required>
+                <option value="" disabled selected>Select...</option>
+                <option value="nope">I didn't</option>
+                <option value="member">Another member</option>
+                <option value="ad">An advertisement</option>
+                <option value="social">Social Media</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+  
+            <button class="btn">Edit</button>
+            <input type="submit" value="Submit" class="btn btn-primary">
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section" style="background-color:#eee;">
     <div class="container">
       <div class="row">
         <div class="col laptop-6">
-          <h2 class="heading">Section Two</h2>
+          <h2 class="heading">Section</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reprehenderit
             assumenda, maxime, explicabo maiores perferendis ab veniam nisi nesciunt soluta,
             ducimus beatae quod omnis laudantium, ea voluptatem velit eius tempore.</p>
 
-          <p><a href="#cancel" class="btn">Cancel</a> <a href="#save" class="btn btn-primary">Save</a></p>
+          <p><a href="#" class="btn">Cancel</a> <a href="#" class="btn btn-primary">Save</a></p>
         </div>
 
         <div class="col laptop-6">
-          <h2 class="heading">Section Three</h2>
+          <h2 class="heading">Section</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit reprehenderit
             assumenda, maxime, explicabo maiores perferendis ab veniam nisi nesciunt soluta,
             ducimus beatae quod omnis laudantium, ea voluptatem velit eius tempore.</p>

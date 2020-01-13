@@ -4,7 +4,7 @@ A CSS framework built with [LESS](https://github.com/less/less.js). Also include
 
 ## Preview
 
-To properyl preview the demo HTML files in this repo I recommend you use a static file server such as [http-server](https://github.com/http-party/http-server) or if you have [PM2](https://github.com/Unitech/pm2) installed you can use `pm2 serve --name framewerk-demo`.
+To properly preview the demo HTML file in this repo I recommend you use a static file server such as [http-server](https://github.com/http-party/http-server) or if you have [PM2](https://github.com/Unitech/pm2) installed you can use `pm2 serve --name framewerk-demo`.
 
 ## Usage
 

@@ -8,6 +8,12 @@ html {
   color: @text-color;
 }
 
+code {
+  font-family: monospace;
+  background-color: rgba(0,0,0,.1);
+  border-radius: 5px;
+}
+
 // -- HEADINGS --
 
 h1,
@@ -62,21 +68,20 @@ a {
   }
 }
 
-// add icon to let them know they will leave this site
+// Add icon to link to indicate they are leaving this site
 a.external {
     &:after {
-      content: '\f08e';
-      font-family: 'FontAwesome';
-      margin-left: 10px;
-      font-size: 80%;
-      line-height: .8;
+      content: '↗';
+      margin-left: .5em;
+      font-size: .8em;
     }
 }
 
 // -- LISTS --
 
 ul {
-  .v-margins();
+  margin-top:    0rem + @line-height;
+  margin-bottom: 0rem + @line-height;
 }
 
 .list-unstyled {
@@ -99,7 +104,7 @@ ul {
   margin-right: auto;
 
   .heading {
-    .font-size(21);
+    font-size: 1.2rem;
     font-weight: @bold-weight;
     margin-top: 2.25rem;
     margin-bottom: .75rem;
@@ -110,14 +115,7 @@ ul {
     }
   }
 
-  .copy {
-    .font-size(18);
-    font-weight: @light-weight;
-
-    &:first-of-type {
-      margin-top: 0;
-    }
-  }
+  p:first-of-type { margin-top: 0; }
 
   .action {
     position: absolute;
@@ -155,7 +153,11 @@ strong,
 .text-primary { color: @primary; }
 .text-highlight { color: @highlight; }
 .text-dark { color: @slate; }
-.text-white { color: white; }
+.text-white,
+.light-text {
+  color: white;
+  a { color: rgba(230,240,255,.9); }
+}
 
 .stress { border-bottom: 1px solid currentcolor; }
 .text-shadow { text-shadow: 2px 2px 1px rgba(0,50,100,.33); }
@@ -172,28 +174,4 @@ strong,
     width: 50px;
     height: 50px;
   }
-}
-
-// -- UTILITIES --
-
-.v-margins {
-  margin-top:    0rem + @line-height;
-  margin-bottom: 0rem + @line-height;
-}
-
-.v-margins-zero {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.font-size (@size: @base) {
-  font-size: 0px + @size;
-  font-size: 0rem + @size / @base;
-
-  .v-margins();
-}
-
-.line-height (@size: @base) {
-  @lines: ceil((@size / @base) / @line-height);
-  line-height: @lines * @line-height-rem;
 }
