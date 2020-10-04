@@ -1,7 +1,10 @@
 {
   "name": "framewerk",
-  "version": "1.1.3",
+  "version": "1.2.0",
   "description": "css framework",
+  "scripts": {
+    "compile": "npx lessc less/framewerk.less framewerk.css"
+  },
   "repository": {
     "type": "git",
     "directory": "https://github.com/kenmorechalfant/framewerk.git"
