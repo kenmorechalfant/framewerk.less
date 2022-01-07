@@ -1,4 +1,4 @@
-# Framewerk
+# framewerk.less
 
 A CSS framework built with [LESS](https://github.com/less/less.js). Also includes [normalize.css](https://github.com/necolas/normalize.css).
 
